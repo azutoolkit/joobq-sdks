@@ -1,0 +1,22 @@
+[package]
+name = "joobq"
+version = "0.8.0"
+edition = "2021"
+description = "Thin JoobQ worker and producer SDK for the JoobQUI Polyglot SDK Gateway"
+license = "MIT"
+readme = "README.md"
+homepage = "https://www.joobq.io/docs/develop/"
+repository = "https://github.com/azutoolkit/joobq-sdks"
+keywords = ["joobq", "jobs", "queue", "workflows"]
+categories = ["asynchronous", "network-programming"]
+include = ["src/**/*.rs", "Cargo.toml", "README.md", "LICENSE"]
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+# Pinned: the transport (ureq with rustls, for https gateways), JSON and SIGTERM handling.
+serde = { version = "=1.0.219", features = ["derive"] }
+serde_json = "=1.0.140"
+ureq = { version = "=2.12.1", default-features = false, features = ["tls", "json"] }
+signal-hook = "=0.3.17"

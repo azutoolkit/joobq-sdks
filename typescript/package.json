@@ -1,0 +1,39 @@
+{
+  "name": "joobq",
+  "version": "0.8.0",
+  "description": "JoobQ worker and producer SDK for the JoobQUI SDK gateway",
+  "license": "MIT",
+  "author": "azutoolkit",
+  "homepage": "https://www.joobq.io/docs/develop/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azutoolkit/joobq-sdks.git",
+    "directory": "sdks/typescript"
+  },
+  "bugs": "https://github.com/azutoolkit/joobq-sdks/issues",
+  "keywords": ["joobq", "jobs", "queue", "workflows", "background-jobs"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

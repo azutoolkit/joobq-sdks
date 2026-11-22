@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "joobq"
+version = "0.8.0"
+description = "JoobQ worker and producer SDK for the JoobQUI SDK gateway"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "azutoolkit" }]
+keywords = ["joobq", "jobs", "queue", "workflows", "background-jobs"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: System :: Distributed Computing",
+  "Typing :: Typed",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://www.joobq.io/docs/develop/"
+Repository = "https://github.com/azutoolkit/joobq-sdks"
+Issues = "https://github.com/azutoolkit/joobq-sdks/issues"
+
+[tool.setuptools]
+packages = ["joobq"]
+
+[tool.setuptools.package-data]
+joobq = ["py.typed"]

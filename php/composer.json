@@ -1,0 +1,23 @@
+{
+    "name": "azutoolkit/joobq",
+    "description": "JoobQ worker and producer SDK for the JoobQUI SDK gateway",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["joobq", "jobs", "queue", "workflows"],
+    "homepage": "https://www.joobq.io/docs/develop/",
+    "support": {
+        "issues": "https://github.com/azutoolkit/joobq-sdks/issues",
+        "source": "https://github.com/azutoolkit/joobq-sdks/tree/main/php"
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "suggest": {
+        "ext-pcntl": "Graceful shutdown on SIGTERM and SIGINT"
+    },
+    "autoload": {
+        "files": ["src/JoobQClient.php"]
+    }
+}
